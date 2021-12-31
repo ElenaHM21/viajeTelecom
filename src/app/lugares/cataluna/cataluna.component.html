@@ -1,0 +1,38 @@
+<body>
+    <div style="position: absolute; top:15px">
+    <button type="submit" (click)="changesVolver()">VOLVER</button>
+    </div>
+    
+    
+    <div style="position: absolute;right: 200px;top:40px;">
+        <h2>CATALUÑA</h2>
+        <table border="1"  *ngIf="hayRegistros(); else sinarticulos">
+            <tr>
+              <td><b>Codigo</b></td><td><b>Nombre</b></td><td><b>Ciudad</b></td><td><b>Provincia</b></td><td><b>Direccion</b></td>
+            </tr>
+            <tr *ngFor="let art of articulos">
+              <td>{{art.codigo}}</td>
+              <td>{{art.name}}</td>
+              <td>{{art.city}}</td>
+              <td>{{art.taxes}}</td>
+              <td>{{art.direction}}</td>
+              
+            </tr>
+          </table>
+          <ng-template #sinarticulos><p>No hay articulos.</p></ng-template>
+      <!-- <div style="position: absolute; right: -300px; top:90px">
+           <form action="" method="get">
+               <label for="name">NOMBRE:</label>
+               <input type="text" id="name" name="name" [(ngModel)]="art.name"><br><br>
+               <label for="city">CIUDAD:</label>
+               <input type="text" id="city" name="city" [(ngModel)]="art.city"><br><br>
+               <label for="name">PROVINCIA:</label>
+               <input type="text" id="taxes" name="taxes" [(ngModel)]="art.taxes"><br><br>
+               <label for="name">DIRECCION:</label>
+               <input type="text" id="direction" name="direction" [(ngModel)]="art.direction"><br><br>
+               <input type="submit" value="DAR DE ALTA LUGARES CATALUÑA" (click)="alta()">
+               
+             </form>        
+         </div> -->
+     </div>
+    </body>

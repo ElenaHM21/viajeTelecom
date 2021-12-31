@@ -1,0 +1,306 @@
+<router-outlet></router-outlet>
+<!--MENU-->
+<ng-sidebar-container>
+    <ng-sidebar [opened]="opened">
+        
+        <img src="../assets/img/menu.png" style="position: absolute; height: 20px; width: 20px;" (click)="changeColor();" />
+        <ul class="menu">
+          <button type="submit" (click)="changesViajes();">Viajes Realizados</button>
+          <button type="submit" (click)="changesComentarios();">Comentarios</button>
+          <button type="submit" (click)="changesGaleria();">Galeria</button>
+          <button type="submit" (click)="changesCerrar();">Cerrar Sesion</button>
+        </ul>
+    </ng-sidebar>
+    <div ng-sidebar-content>
+    
+        <img src="../assets/img/menu.png" style="position: absolute; height: 20px; width: 20px;" (click)="changeColor();" />
+ 
+    </div>
+</ng-sidebar-container>
+<!--MAPA-->
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+<!--COMUNIDADES-->
+<mat-card class="example-card" style="position: absolute; top: 15px; left: 750px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/galicia.png"style="height: 150px; width: 200px;" >
+    
+    <mat-card-actions>
+        <form>
+            <button type="submit" (click)="changesGalicia()">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+  <mat-card class="example-card" style="position: absolute; top: 15px; left: 1000px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/asturias.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/galicia"(click)="changesAsturias();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+  <mat-card class="example-card" style="position: absolute; top: 300px; left: 750px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/cantabria.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/cantabria"(click)="changesCantabria();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+  <mat-card class="example-card" style="position: absolute; top: 300px; left: 1000px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/paisvasco.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/paisvasco"(click)="changesPaisVasco();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 300px; left: 1250px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/navarra.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/navarra"(click)="changesNavarra();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 600px; left: 750px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/aragon.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/aragon"(click)="changesAragon();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+  
+  <mat-card class="example-card" style="position: absolute; top: 15px; left: 1250px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/cataluna.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/cataluna"(click)="changesCataluna();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 600px; left: 1000px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/valencia.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/valencia"(click)="changesValencia();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 600px; left: 1250px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/murcia.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/murcia"(click)="changesMurcia();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 900px; left: 0px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/andalucia.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/andalucia"(click)="changesAndalucia();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+  <mat-card class="example-card" style="position: absolute; top: 900px; left: 250px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/castillalamancha.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/castillalamancha"(click)="changesMancha();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 900px; left: 490px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/extremadura.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/extremadura"(click)="changesExtremadura();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 900px; left: 750px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/madrid.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/madrid"(click)="changesMadrid();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 900px; left: 1000px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/castillayleon.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/castillayleon"(click)="changescastillaLeon();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 600px; left: 1480px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/larioja.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/larioja"(click)="changesRioja();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 15px; left: 1480px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/baleares.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/cataluna"(click)="changesBaleares();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>
+
+  <mat-card class="example-card" style="position: absolute; top: 300px; left: 1480px;">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--<mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+    </mat-card-header>
+    <img mat-card-image src="../assets/img/canarias.png" style="height: 150px; width: 200px;">
+    
+    <mat-card-actions>
+        <form action="http://localhost:4200/canarias"(click)="changesCanarias();">
+            <button type="submit">CONTINUAR</button>
+          </form>
+      
+    </mat-card-actions>
+    
+  </mat-card>

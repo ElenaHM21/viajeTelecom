@@ -1,0 +1,32 @@
+<div style="position: absolute;right: 500px;">
+    <img src="../assets/img/logo.png" >
+    </div>
+   <div style="position: absolute;right: 160px;top:90px">
+     <h2>REGISTRAR</h2>
+     <!--EL FORMULARIO CONSTARA CON EL NOMBRE DEL USUARIO, APELLIDOS, CORREO ELECTRONICO
+    AÑO DE NACIMENTO, CONTRASEÑA-->
+      <table>
+        <tr *ngFor="let art of articulos">    
+        </tr>
+      </table>
+      <div>
+        <form action="" method="get">
+            <label for="name">NOMBRE:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="art.name"><br><br>
+            <label for="apellidos">APELLIDOS</label>
+            <input type="text" id="apellidos" name="apellidos"><br><br>
+            <label for="mail">CORREO ELECTRONICO</label>
+            <input type="mail" id="mail" name="mail" [(ngModel)]="art.mail"><br><br>
+            <label for="date">AÑO DE NACIMIENTO</label>
+            <input type="date" id="date" name="date"><br><br>
+            <label for="password">CONTRASEÑA</label>
+            <input type="password" id="password" name="pasword" [(ngModel)]="art.password"><br><br>
+            <input type="submit" value="REGISTRARSE" (click)="alta()">
+            <form>
+                <button type="submit"(click)="volver()">VOLVER</button>
+              </form><br>
+          </form>        
+      </div>  
+  </div>
+    
+    

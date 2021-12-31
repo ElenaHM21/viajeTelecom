@@ -1,0 +1,15 @@
+ng-sidebar-container{
+    height: 145px;
+    width: 132px;
+}
+/*::ng-deep .ng-sidebar{
+    background-color:#f4f4f4;
+    width: 300px;
+    padding: 2em 3em;
+
+}*/
+
+agm-map {
+    height: 700px;
+    width: 700px;
+  }

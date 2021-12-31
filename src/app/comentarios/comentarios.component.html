@@ -1,0 +1,30 @@
+<div style="position: absolute;left: 50px;top:40px;">
+    <h2>COMENTARIOS</h2>
+    <!--EL FORMULARIO DE COMENTARIOS-->
+    <table border="1"  *ngIf="hayRegistros(); else sinarticulos" >
+        <tr>
+          <td><b>Codigo</b></td><td><b>Asunto</b></td><td><b>Mensaje</b></td>
+        </tr>
+        <tr *ngFor="let art of articulos">
+          <td>{{art.codigo}}</td>
+          <td>{{art.asunto}}</td>
+          <td>{{art.mensaje}}</td>
+          
+                  
+        </tr>
+      </table>
+      <ng-template #sinarticulos><p>No hay articulos.</p></ng-template>
+     <div style="position: absolute; right: -400px; top:90px">
+       <form action="" method="get">
+           <label for="name">ASUNTO:</label>
+           <input type="text" id="asunto" name="asunto"[(ngModel)]="art.asunto"><br><br>
+           <label for="mail">CORREO ELECTRONICO</label>
+            <input type="mail" id="mail" name="mail"><br><br>
+           <label for="mensaje">MENSAJE:</label> 
+           <textarea type="textarea" id="mensaje" name="mensaje"[(ngModel)]="art.mensaje"></textarea><br><br>
+           <input type="submit" value="COMENTAR"(click)="alta()">
+           <form>
+               <button type="submit" (click)="volver()">VOLVER</button>
+             </form><br>
+         </form>        
+     </div> 
