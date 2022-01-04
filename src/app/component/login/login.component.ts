@@ -14,4 +14,7 @@ export class LoginComponent implements OnInit {
   iniciar(){
     this.router.navigate(['/mapa']);
   }
+  changesRegistrar(){
+    this.router.navigate(['/register']);
+  }
 }
