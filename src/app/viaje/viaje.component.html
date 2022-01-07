@@ -3,12 +3,12 @@
     <!--EL FORMULARIO DE COMENTARIOS-->
     <table border="1"  *ngIf="hayRegistros(); else sinarticulos" >
         <tr>
-          <td><b>Codigo</b></td><td><b>Viaje</b></td>
+          <td><b>Codigo</b></td><td><b>Viaje</b></td><td><b>Mail</b></td>
         </tr>
         <tr *ngFor="let art of articulos">
           <td>{{art.codigo}}</td>
           <td>{{art.viaje}}</td>
-          
+          <td>{{art.mail}}</td>
           
                   
         </tr>
@@ -18,7 +18,8 @@
        <form action="" method="get">
            <label for="name">CIUDAD DEL VIAJE:</label>
            <input type="text" id="viaje" name="viaje"[(ngModel)]="art.viaje"><br><br>
-          
+           <label for="name">Mail Usuario:</label>
+           <input type="text" id="viaje" name="viaje"[(ngModel)]="art.mail"><br><br>
            <input type="submit" value="VIAJE"(click)="alta()">
            <form>
                <button type="submit" (click)="volver()">VOLVER</button>

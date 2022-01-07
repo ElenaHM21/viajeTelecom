@@ -12,7 +12,8 @@ export class ViajeComponent implements OnInit {
   articulos:any;
   art={
     codigo:0,
-    viaje:""
+    viaje:"",
+    mail:"",
   }
   constructor(private viajeServicio:ViajeService, private router:Router) { }
 
